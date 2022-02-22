@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/Todo
+    password: ''
+  jpa:
+    database: mysql
+    hibernate:
+      format-sql: 'true'
+      use-sql-comments: 'true'
+      show-sql: 'true'
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+graphql:
+  packages:
+    - "com.example.todographql"
+  playground:
+    enabled: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
