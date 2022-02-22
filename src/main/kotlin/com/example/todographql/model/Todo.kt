@@ -16,5 +16,4 @@ class Todo (
     @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "todoId")
     var items: List<TodoItem>? = emptyList()
-    private set
 }
